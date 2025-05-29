@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Feedback-Simple Calculator</title>
+    <link href="nav.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    
+        <table>
+        <tr><td>Name:</td><td><input type="text" id="name"></td></tr>
+        <tr><td>Email:</td><td><input type="email" id="email" ></td></tr>
+        <tr><td>Feedback:</td><td><textarea rows="5" cols="10"></textarea></td></tr>
+
+        <tr><td><button type="submit" onclick="validateform()">Submit</button></td></tr> <p id="abc" style="display: none; color: rgb(44, 105, 9);">The form has been submitted</p>
+        </table>
+    
+    <nav>
+
+        <a href="index.html">Home</a>|
+        <a href="about.html">About</a>|
+        <a href="feedback.html">Feedback</a>
+
+    </nav>
+    <script>
+        function validateform(){
+        let name=document.getElementById("name").value;
+        let email=document.getElementById("email").value;
+
+        if(name === "")
+        {   
+            alert("Please Enter your Name!!");
+            return false;
+        }
+        else if(email === ""){
+            alert("Please Enter Your Email!!");
+            return false;
+        }
+        else {
+            $(document).ready(function(){
+                $("#abc").show();
+            })
+        }
+    }
+
+    </script>
+</body>
+</html>
